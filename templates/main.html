@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FLIGHT DELAY PREDICTION home</title>
+    
+</head>
+<body>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main1.css') }}">
+<header>
+    <nav  class="navbar fixed-top navbar-dark bg-dark">
+        <ul>
+            <li><a href="/">FLIGHT DELAY PREDICTION</a></li>
+            <li><a href="https://www.w3schools.com">FLIGHT PRICE PREDICTION</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="main">
+        <div class="form">
+            <h2> FLIGHT DELAY PREDICTION!</h2>
+            <form id="register" method="POST" action ="{{url_for('home')}}">
+                <label> DEPARTURE DELAY: </label> <br>
+                <input type="text", size="35"
+                 name ="X1" id = 'X1' placeholder="Enter"> <br> <br>
+                <label> AIR_SYSTEM DELAY: </label> <br>
+                <input type="text", size="35" 
+                name ="X2" id = 'X2' placeholder="Enter"> <br> <br>
+                <label> AIRLINE DELAY: </label> <br>
+                <input type="text", size="35" 
+                name ="X3" id = 'X3' placeholder="Enter"> <br> <br>
+                <label> LATE_AIRCRAFT DELAY: </label> <br>
+                <input type="text", size="35" 
+                name ="X4" id = 'X4' placeholder="Enter"> <br> <br>
+                <label> WEATHER DELAY: </label> <br>
+                <input type="text", size="35" 
+                name ="X5" id = 'X5' placeholder="Enter"> <br> <br>
+
+                <input type="submit" value = "  PREDICT"
+                 name ="predict" id = 'submit'>
+                 <h2><center>{{ prediction_text }}</center></h2>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
